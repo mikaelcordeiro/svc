@@ -40,7 +40,7 @@ cv.imshow('pessoas menores', img_resized)
 
 pixels_x, pixels_y, color_channels = 500, 500, 3
 
-matriz = np.zeros(shape=(pixels_x, pixels_y, color_channels), dtype='uint8')
+matriz = np.zeros(shape=(pixels_y, pixels_x, color_channels), dtype='uint8')
 
 b, g, r = 255, 0, 0
 
