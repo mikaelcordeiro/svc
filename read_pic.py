@@ -78,6 +78,34 @@ cv.rectangle(img=area_matriz_2, pt1=ponto_1, pt2=(area_matriz_2.shape[1] // 2, a
 
 cv.imshow('area preenchida facil 2', area_matriz_2)
 
+'''============================================ circulo =================================================='''
+
+matriz_circulo = matriz.copy()
+
+x, y = matriz_circulo.shape[1] // 2, matriz_circulo.shape[0] // 2
+
+centro = (x, y)
+
+raio = 40 # pixels
+
+cv.circle(img=matriz_circulo, center=centro, radius=raio, color=cor, thickness=1)
+
+cv.imshow('circulo', matriz_circulo)
+
+'''============================================ linha =================================================='''
+
+cv.line(img=matriz_circulo, pt1=(0, 0), pt2=(x, y), color=(255, 255, 255), thickness=2)
+
+cv.imshow('linha', matriz_circulo)
+
+'''============================================ texto =================================================='''
+
+texto = 'hello world'
+
+cv.putText(img=matriz_circulo, text=texto, org=(x, y - 100), fontFace=cv.FONT_HERSHEY_COMPLEX, fontScale=1., color=(0, 0, 255), thickness=1)
+
+cv.imshow('Texto na tela', matriz_circulo)
+
 # fecha a janela "Cat" caso aperte qualquer botao do teclado
 
 cv.waitKey(0)
