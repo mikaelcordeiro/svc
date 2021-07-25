@@ -2,12 +2,13 @@ import cv2 as cv
 
 # se passada um path, le o arquivo
 # se passado um inteiro 0, 1, 2 etc, le uma webcam
+#video é uma instancia de cv.VideoCapture()
 
 video = cv.VideoCapture('videos/carros1.mp4')
 
-#video é uma instancia de cv.VideoCapture()
-
 while True:
+
+    '''============================================= video normal ====================================================='''
 
     # aqui dentro do loop, lemos a instancia "video" frame por frame com o video.read()
     # video.read() tem duas instancias: leu_certo e frame
@@ -20,6 +21,10 @@ while True:
 
     cv.imshow('video', frame)
 
+    '''============================================ video reescalado =================================================='''
+
+    # aqui, temos a largura de "img"
+    
     largura = frame.shape[1]
 
     # aqui, temos a altura de "img"
@@ -33,6 +38,9 @@ while True:
     # devem ser valores inteiros
 
     dimensoes = int(largura*escala), int(altura*escala)
+
+    # o video reescalado deve ser colocado num atributo, e esse atributo sera o frame reescalado
+    # Funciona para videos, imagens e live videos
 
     frame_resized = cv.resize(src=frame, dsize=dimensoes, interpolation=cv.INTER_AREA)
 
