@@ -3,7 +3,7 @@ import numpy as np
 
 '''============================================ imagem =================================================='''
 
-# img é uma instancioa de cv.imshow()
+# img é uma instancia de cv.imshow()
 
 img = cv.imread('/home/mikael/scripts/python/svc/fotos/pessoas1.jpg')
 
@@ -33,6 +33,10 @@ dimensoes = int(largura*escala), int(altura*escala)
 # Funciona para videos, imagens e live videos
 
 img_resized = cv.resize(src=img, dsize=dimensoes, interpolation=cv.INTER_AREA)
+
+# cv.INTER_AREA: caso esteja encolhendo a imagem
+# cv.INTER_LINEAR: caso esteja aumentando a imagem
+# cv.INTER_CUBIC: caso esteja aumentando a imagem com mais qualidade
 
 cv.imshow('pessoas menores', img_resized)
 
