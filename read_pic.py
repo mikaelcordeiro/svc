@@ -5,7 +5,7 @@ import numpy as np
 
 # img é uma instancioa de cv.imshow()
 
-img = cv.imread('fotos/pessoas1.jpg')
+img = cv.imread('/home/mikael/scripts/python/svc/fotos/pessoas1.jpg')
 
 # aqui, temos a largura de "img"
 

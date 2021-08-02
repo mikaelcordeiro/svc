@@ -1,6 +1,6 @@
 import cv2 as cv
 
-imagem = cv.imread(filename='fotos/pessoas2.jpg')
+imagem = cv.imread(filename='/home/mikael/scripts/python/svc/fotos/pessoas2.jpg')
 
 largura = imagem.shape[1]
 

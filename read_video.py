@@ -4,7 +4,7 @@ import cv2 as cv
 # se passado um inteiro 0, 1, 2 etc, le uma webcam
 #video é uma instancia de cv.VideoCapture()
 
-video = cv.VideoCapture('videos/carros1.mp4')
+video = cv.VideoCapture('/home/mikael/scripts/python/svc/videos/carros1.mp4')
 
 while True:
 
