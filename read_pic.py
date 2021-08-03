@@ -3,7 +3,7 @@ import numpy as np
 
 '''============================================ imagem =================================================='''
 
-# img é uma instancia de cv.imshow()
+# img é uma instancia de cv.imread()
 
 img = cv.imread('/home/mikael/scripts/python/svc/fotos/pessoas1.jpg')
 
